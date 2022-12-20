@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <title>Resistration Form</title>
+</head>
+
+<body>
+  <!-- NAv BAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../assests/authen.jpg" alt="Bootstrap" width="30" height="24">
+        Authentication</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav  my-2 my-lg-0 navbar-nav-scroll">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#signup-form">Sign Up</a>
+
+          </li>
+          <li class="nav-item">
+
+            <a class="nav-link " aria-current="page" href="#login-form">Log In </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="jumbotron">
+    <h1 class="display-4">Authentication</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-dark btn-lg" href="#" role="button">Explore more</a>
+  </div>
+  
+  <div class="container">
+
+    
+    <!-- SIGN UP FORM -->
+    <form class="row g-3 resistration-form" id="signup-form">
+      <h2 class="display-3 col-md-12">Sign Up</h2>
+      <div class="col-md-12">
+        <div class="alert alert-success alert-dismissible fade show" role="alert" id="signup-success-alert">
+          signup success
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="signup-failure-alert">
+          signup declined!
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="signup-first-name" class="form-label">First name</label>
+        <input type="text" class="form-control" id="signup-first-name">
+        <div class="valid-feedback" id="valid-first-name">
+          Looks good!
+        </div>
+        <div class="invalid-feedback" id="invalid-first-name">
+          Please provide a valid First Name.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="signup-last-name" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="signup-last-name">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Please provide a valid Last Name.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="signup-email" class="form-label">Email</label>
+        <div class="input-group has-validation">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+          </div>
+          
+          <input type="text" class="form-control" id="signup-email" aria-describedby="inputGroupPrepend">
+          <div class="valid-feedback" id="valid-email">
+            Looks good!
+          </div>
+          <div class="invalid-feedback" id="invalid-email">
+            Please choose a Email.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="signup-contact" class="form-label">Contact</label>
+        <div class="input-group has-validation">
+          
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">+91</span>
+          </div>
+          <input type="text" class="form-control" id="signup-contact" aria-describedby="inputGroupPrepend">
+          <div class="valid-feedback" id="valid-contact">
+            Looks good!
+          </div>
+          <div class="invalid-feedback" id="invalid-contact">
+            Please choose a contact.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="signup-password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="signup-password">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Please provide a valid password.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="signup-cpassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="signup-cpassword">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Password and ConfirmPassword not match
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="tnC">
+          <label class="form-check-label" for="tnC">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback" id="valid-tnc">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="col-12 submit-btn">
+        <button class="btn btn-dark " type="button" onclick="signup()">Sign up</button>
+      </div>
+    </form>
+
+    <!--  LOG IN FORM -->
+    
+    <form class="login-form" id="login-form">
+      <h2 class="display-3">Log in</h2>
+      <div class="col-md-12">
+        <div class="alert alert-success alert-dismissible fade show" role="alert" id="login-success-alert">
+          login success
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="login-failure-alert">
+          login declined!
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="login-email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="login-password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="login-password">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <div class="col-12 submit-btn">
+        <button type="button" class="btn btn-dark" onclick="login()">Log in</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
